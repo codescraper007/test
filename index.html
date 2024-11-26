@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .timetable {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 80%;
+    }
+    .timetable th, .timetable td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    .timetable th {
+      background-color: #f2f2f2;
+      color: black;
+    }
+    .timetable tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .timetable td.break {
+      background-color: #ffcccb;
+      color: red;
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<div class="center">
+  <marquee behavior="scroll" direction="left" style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">
+    Class Timetable
+  </marquee>
+  <table class="timetable">
+    <tr>
+      <th>Time</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+    </tr>
+    <tr>
+      <td>09:00 - 10:00</td>
+      <td>Math</td>
+      <td>English</td>
+      <td>Science</td>
+      <td>History</td>
+      <td>Math</td>
+    </tr>
+    <tr>
+      <td>10:00 - 11:00</td>
+      <td>English</td>
+      <td>Math</td>
+      <td>Geography</td>
+      <td>Math</td>
+      <td>Science</td>
+    </tr>
+    <tr>
+      <td>11:00 - 12:00</td>
+      <td>Science</td>
+      <td>History</td>
+      <td>English</td>
+      <td>Science</td>
+      <td>History</td>
+    </tr>
+    <tr>
+      <td>12:00 - 01:00</td>
+      <td class="break" colspan="5">Lunch Break</td>
+    </tr>
+    <tr>
+      <td>01:00 - 02:00</td>
+      <td>History</td>
+      <td>Geography</td>
+      <td>Math</td>
+      <td>English</td>
+      <td>Geography</td>
+    </tr>
+    <tr>
+      <td>02:00 - 03:00</td>
+      <td>Geography</td>
+      <td>Science</td>
+      <td>History</td>
+      <td>Geography</td>
+      <td>English</td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
