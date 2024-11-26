@@ -4,28 +4,52 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      animation: fadeIn 2s ease-in-out;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     .timetable {
       margin: 0 auto;
       border-collapse: collapse;
       width: 80%;
+      animation: slideIn 2s ease-out;
     }
+
+    @keyframes slideIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
     .timetable th, .timetable td {
       border: 1px solid #ddd;
       padding: 8px;
       text-align: center;
+      transition: background-color 0.5s ease;
     }
+
     .timetable th {
       background-color: #f2f2f2;
       color: black;
     }
+
     .timetable tr:nth-child(even) {
       background-color: #f9f9f9;
     }
+
+    .timetable tr:hover {
+      background-color: #d3d3d3;
+      transition: background-color 0.3s ease-in-out;
+    }
+
     .timetable td.break {
       background-color: #ffcccb;
       color: red;
     }
+
     .center {
       display: flex;
       flex-direction: column;
@@ -33,14 +57,33 @@
       align-items: center;
       height: 100vh;
     }
+
+    marquee {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      animation: textSlide 10s infinite linear;
+    }
+
+    @keyframes textSlide {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .timetable th {
+      animation: spin 5s linear infinite;
+    }
   </style>
 </head>
 <body>
 
 <div class="center">
-  <marquee behavior="scroll" direction="left" style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">
-    Class Timetable
-  </marquee>
+  <marquee behavior="scroll" direction="left">Class Timetable</marquee>
   <table class="timetable">
     <tr>
       <th>Time</th>
